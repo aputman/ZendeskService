@@ -10,10 +10,11 @@ def hello():
 
 @app.route('/api/<email>')
 def api(email):
-	if (email in emails):
-		return email
-	else:
-		abort(404)
+	return email
+	#if (email in emails):
+	#	return email
+	#else:
+	#	abort(404)
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0")
