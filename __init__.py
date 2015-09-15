@@ -2,7 +2,35 @@ from flask import Flask
 from flask import jsonify
 app = Flask(__name__)
 
-emails = {'aputman@hmc.edu': {'name': 'Alex Putman', 'age': 21}, '': {'win': True}}
+emails = {'maingocho94@gmail.com':
+{
+  "orders": {
+    "doodad":20,
+    "widget":50,
+    "gewgaw":200,
+    "total":270
+  }
+},
+
+'alexandermputman@gmail.com':
+{
+  "orders": {
+    "doodad":70,
+    "widget":50,
+    "gewgaw":70,
+    "total":190
+  }
+},
+
+'customer@example.com':
+{
+  "orders": {
+    "doodad":0,
+    "widget":40,
+    "gewgaw":30,
+    "total":70
+  }
+}}
 
 @app.route('/')
 def hello():
