@@ -8,7 +8,7 @@ def hello():
 	return 'Hello World!'
 
 @app.route('/api/<email>')
-def api(email = None):
+def api(email):
 	if (email in emails):
 		return flask.jsonify(**emails[email])
 	else:
