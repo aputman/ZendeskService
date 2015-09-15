@@ -2,7 +2,7 @@ from flask import Flask
 from flask import jsonify
 app = Flask(__name__)
 
-emails = {"aputman@hmc.edu": {'name': 'Alex Putman', 'age': 21}}
+emails = {'aputman@hmc.edu': {'name': 'Alex Putman', 'age': 21}}
 
 @app.route('/')
 def hello():
@@ -11,7 +11,7 @@ def hello():
 @app.route('/api/<email>')
 def api(email):
 	if (email in emails):
-		return jsonify(**emails[email])
+		return email
 	else:
 		abort(404)
 
